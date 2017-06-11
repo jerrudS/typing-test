@@ -5,3 +5,8 @@
 #quote {
   margin-top: 40px;
 }
+
+.current {
+  font-size: 40px;
+  color: #1955ff;
+}
