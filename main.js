@@ -10,5 +10,11 @@ for (var i = 0; i < letter.length; i++) {
   $quote.appendChild(el)
 }
 
-var style = document.querySelector('span')
-style.classList.add('current')
+document.addEventListener('DOMContentLoaded', function() {
+  var $style = document.querySelector('span')
+  style.classList.add('current')
+})
+
+document.addEventListener('keydown', function(event) {
+  
+})
