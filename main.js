@@ -12,9 +12,19 @@ for (var i = 0; i < letter.length; i++) {
 
 document.addEventListener('DOMContentLoaded', function() {
   var $style = document.querySelector('span')
-  style.classList.add('current')
+  $style.classList.add('current')
 })
 
-document.addEventListener('keydown', function(event) {
-  
+document.addEventListener('keypress', function(event) {
+  var $current = document.querySelector('span')
+  var $next = $current.nextElementSibling
+  if (event.key === $current.textContent) {
+    $current.classList.remove('current')
+    $current.classList.add('right')
+    $next.classList.add('current')
+  }
+  else {
+    $current.classList.remove('current')
+    $current.classList.add('wrong')
+  }
 })
