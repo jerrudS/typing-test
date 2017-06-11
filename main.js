@@ -16,12 +16,12 @@ document.addEventListener('DOMContentLoaded', function() {
 })
 
 document.addEventListener('keypress', function(event) {
-  var $current = document.querySelector('span')
+  var $current = document.querySelector('.current')
   var $next = $current.nextElementSibling
   if (event.key === $current.textContent) {
-    $current.classList.remove('current')
-    $current.classList.add('right')
-    $next.classList.add('current')
+      $current.classList.remove('current')
+      $current.classList.add('right')
+      $next.classList.add('current')
   }
   else {
     $current.classList.remove('current')
