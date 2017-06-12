@@ -10,3 +10,12 @@
   font-size: 40px;
   color: #1955ff;
 }
+
+.right {
+  color: green;
+}
+
+.wrong {
+  color: red;
+  font-size: 40px;
+}

@@ -10,5 +10,21 @@ for (var i = 0; i < letter.length; i++) {
   $quote.appendChild(el)
 }
 
-var style = document.querySelector('span')
-style.classList.add('current')
+document.addEventListener('DOMContentLoaded', function() {
+  var $style = document.querySelector('span')
+  $style.classList.add('current')
+})
+
+document.addEventListener('keypress', function(event) {
+  var $current = document.querySelector('.current')
+  if (event.key === $current.textContent) {
+    var $next = $current.nextElementSibling
+    $current.classList.remove('current')
+    $current.classList.add('right')
+    $next.classList.add('current')
+    return
+  }
+  else {
+    $current.classList.add('wrong')
+  }
+})
