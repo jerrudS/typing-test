@@ -22,21 +22,9 @@ document.addEventListener('keypress', function(event) {
     $current.classList.remove('current')
     $current.classList.add('right')
     $next.classList.add('current')
+    return
   }
   else {
-    $current.classList.remove('current')
     $current.classList.add('wrong')
-  }
-})
-
-document.addEventListener('keypress', function(event) {
-  var $wrong = document.querySelector('.wrong')
-  var $nextWrong = $wrong.nextElementSibling
-  if (event.key === $wrong.textContent) {
-    $wrong.classList.remove('wrong')
-    $wrong.classList.add('right')
-    $nextWrong.classList.add('current')
-  }
-  else {
   }
 })
